@@ -12,6 +12,7 @@ interface UseHubSpotFormResponse {
   readonly loaded: boolean;
   readonly error: boolean;
   readonly formCreated: boolean;
+  readonly setFormCreated;
 }
 
 /**
@@ -115,5 +116,5 @@ export const useHubspotForm = (
     }
   }, [loaded, formCreated, setFormCreated]);
 
-  return { loaded, formCreated, error };
+  return { loaded, formCreated, error, setFormCreated };
 };
